@@ -10,7 +10,7 @@ def get_sencence():
 
 
 def get_text():
-    return faker.sentences(nb=3, ext_word_list=None)
+    return faker.text(max_nb_chars=200, ext_word_list=None)
 
 
 def save_dbobjs(dbobjs):
@@ -30,7 +30,7 @@ users = [
 ]
 
 threads = [
-    Thread(name=faker.bs(), createdBy=random.choice(users)) for _ in range(10)
+    Thread(title=faker.bs(), createdBy=random.choice(users)) for _ in range(10)
 ]
 
 thread_followers = [

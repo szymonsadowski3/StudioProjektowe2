@@ -1,6 +1,6 @@
 import datetime
 
-from peewee import TextField, DateTimeField, Model, CharField, ForeignKeyField
+from peewee import *
 from db_configuration import pgdb
 
 
@@ -24,7 +24,7 @@ class User(BaseModel):
 
 
 class Thread(BaseModel):
-    name = CharField()
+    title = CharField()
     createdBy = ForeignKeyField(User)
     createdOn = DateTimeField(default=datetime.datetime.now)
 
