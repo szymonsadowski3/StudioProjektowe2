@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 from playhouse.shortcuts import model_to_dict
 
 from config import DEFAULTS
-from models import Section
+from models import *
 
 app = Flask(__name__)
 
@@ -19,7 +19,7 @@ def handler_by_query(query_object):
         sections = []
     is_response_empty = len(sections) == 0
     return jsonify({
-        "sections": sections
+        "items": sections
     }), 204 if is_response_empty else 200
 
 
@@ -32,6 +32,41 @@ def get_sections():
 def get_section_by_id(section_id):
     return handler_by_query(
         Section.select().where(Section.id == section_id).paginate(get_int_arg('page'), get_int_arg('per_page'))
+    )
+
+
+@app.route('/user')
+def get_users():
+    return handler_by_query(User.select().paginate(get_int_arg('page'), get_int_arg('per_page')))
+
+
+@app.route('/user/<int:user_id>')
+def get_user_by_id(user_id):
+    return handler_by_query(
+        Section.select().where(User.id == user_id).paginate(get_int_arg('page'), get_int_arg('per_page'))
+    )
+
+
+@app.route('/thread')
+def get_threads():
+    return handler_by_query(Thread.select().paginate(get_int_arg('page'), get_int_arg('per_page')))
+
+
+@app.route('/thread/<int:thread_id>')
+def get_thread_by_id(thread_id):
+    return handler_by_query(
+        Thread.select().where(Thread.id == thread_id).paginate(get_int_arg('page'), get_int_arg('per_page'))
+    )
+
+
+@app.route('/thread/<int:thread_id>/followers')
+def get_thread_followers_by_id(thread_id):
+    return handler_by_query(
+        User
+        .select()
+        .join(ThreadFollowers, on=(ThreadFollowers.user == User.id))
+        .where(ThreadFollowers.thread == thread_id)
+        .paginate(get_int_arg('page'), get_int_arg('per_page'))
     )
 
 
