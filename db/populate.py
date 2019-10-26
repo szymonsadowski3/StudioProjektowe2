@@ -1,5 +1,5 @@
 import random
-from models import *
+from db.models import *
 from faker import Faker
 
 faker = Faker()

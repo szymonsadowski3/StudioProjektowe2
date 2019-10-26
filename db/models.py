@@ -1,7 +1,7 @@
 import datetime
 
 from peewee import *
-from db_configuration import pgdb
+from db.db_configuration import pgdb
 
 
 class BaseModel(Model):

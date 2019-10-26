@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 from playhouse.shortcuts import model_to_dict
 
 from config import DEFAULTS
-from models import *
+from db.models import *
 
 app = Flask(__name__)
 
@@ -67,6 +67,30 @@ def get_thread_followers_by_id(thread_id):
         .join(ThreadFollowers, on=(ThreadFollowers.user == User.id))
         .where(ThreadFollowers.thread == thread_id)
         .paginate(get_int_arg('page'), get_int_arg('per_page'))
+    )
+
+
+@app.route('/post')
+def get_posts():
+    return handler_by_query(Post.select().paginate(get_int_arg('page'), get_int_arg('per_page')))
+
+
+@app.route('/post/<int:post_id>')
+def get_post_by_id(post_id):
+    return handler_by_query(
+        Post.select().where(Post.id == post_id).paginate(get_int_arg('page'), get_int_arg('per_page'))
+    )
+
+
+@app.route('/private_message')
+def get_private_messages():
+    return handler_by_query(PrivateMessage.select().paginate(get_int_arg('page'), get_int_arg('per_page')))
+
+
+@app.route('/private_message/<int:private_message_id>')
+def get_private_message_by_id(private_message_id):
+    return handler_by_query(
+        PrivateMessage.select().where(PrivateMessage.id == private_message_id).paginate(get_int_arg('page'), get_int_arg('per_page'))
     )
 
 
