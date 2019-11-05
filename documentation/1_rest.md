@@ -55,7 +55,7 @@ class PrivateMessage(BaseModel):
 
 Po uruchomieniu aplikacji schemat w bazie danych przedstawiał się następująco
 
-![model]("model.PNG")
+![model]("https://raw.githubusercontent.com/szymonsadowski3/StudioProjektowe2/master/documentation/faker.PNG")
 
 ## Generowanie danych
 
@@ -63,7 +63,7 @@ Aby móc pracować z tak przygotowaną bazą danych użyliśmy biblioteki **fake
 
 Po uruchomieniu skryptu tak wyglądała przykładowa porcja danych wygenerowana przez skrypt (na zrzucie ekranu poniżej widać wygenerowane prywatne wiadomości):
 
-![faker]("faker.PNG")
+![faker]("https://raw.githubusercontent.com/szymonsadowski3/StudioProjektowe2/master/documentation/model.PNG")
 
 Mając tak przygotowaną bazę danych mogliśmy przystąpić do implementacji sieciowego interfejsu dostępu do danych **REST**
 
