@@ -27,6 +27,7 @@ class Thread(BaseModel):
     title = CharField()
     createdBy = ForeignKeyField(User)
     createdOn = DateTimeField(default=datetime.datetime.now)
+    section = ForeignKeyField(Section)
 
 
 class ThreadFollowers(BaseModel):

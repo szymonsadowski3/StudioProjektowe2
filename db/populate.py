@@ -30,7 +30,7 @@ users = [
 ]
 
 threads = [
-    Thread(title=faker.bs(), createdBy=random.choice(users)) for _ in range(10)
+    Thread(title=faker.bs(), createdBy=random.choice(users), section=random.choice(sections)) for _ in range(10)
 ]
 
 thread_followers = [
