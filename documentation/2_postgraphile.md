@@ -130,6 +130,6 @@ Na zrzucie ekranu poniżej umieszczono przykładowe zapytanie ukazujące zaletę
 ![allPosts](https://raw.githubusercontent.com/szymonsadowski3/StudioProjektowe2/master/documentation/queryAllPosts.PNG)
 
 
-Na drugim zrzucie ekranu widoczne jest przykładowe zapytanie z parametrem (poiberany jest post z identyfikatorem 801):
+Na drugim zrzucie ekranu widoczne jest przykładowe zapytanie z parametrem (pobierany jest post z identyfikatorem 801):
 
 ![queryById](https://raw.githubusercontent.com/szymonsadowski3/StudioProjektowe2/master/documentation/queryById.PNG)
