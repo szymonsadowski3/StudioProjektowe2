@@ -4,4 +4,4 @@
 
 2. Run postgraphile with connection string
 
-`postgraphile -c postgres://postgres:postgres@localhost:5432/postgres`
+`postgraphile --cors -c postgres://postgres:postgres@localhost:5432/postgres`
