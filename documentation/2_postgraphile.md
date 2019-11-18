@@ -6,7 +6,7 @@ Zgodnie z harmonogramem tym razem zakończyliśmy implementację sieciowego inte
 
 W poprzednim punkcie harmonogramu zakończyliśmy implementację dostępu **REST**, w trakcie czego zbudowaliśmy bazę danych. Ostateczna struktura bazy danych została wylistowana poniżej w skrypcie SQL:
 
-```
+```sql
 create table "user"
 (
 	id serial not null
