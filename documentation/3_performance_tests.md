@@ -65,5 +65,22 @@ Dla 10 000 rekordów w interfejsie **REST** wyniki przedstawiały się następuj
 
 ![rest10k](https://raw.githubusercontent.com/szymonsadowski3/StudioProjektowe2/master/documentation/rest10k.PNG)
 
-Zaś dla interfejsu **GraphQl** wyniki byly takie:
+Zaś dla interfejsu **GraphQl** wyniki były takie:
 
+![graphql10k](https://raw.githubusercontent.com/szymonsadowski3/StudioProjektowe2/master/documentation/graphql10k.PNG)
+
+Na powyższym przykładzie widoczna jest dużo wyższa wydajność interfejsu GraphQL, za pomocą którego te same dane uzyskano ponad 10 razy szybciej. Nieco większy był natomiast rozmiar odpowiedzi interfejsu GraphQL - 3.66MB, natomiast odpowiedź REST-a miała 3.46MB. Jest to spowodowane tym, że w GraphQl każdy obiekt jest dodatkowo *opakowany* w pole o nazwie *node*. Jest to jednakże nieznaczna różnica, która nie powinna powodować żadnych niekorzyści.
+
+## Jeszcze większa ilość danych
+
+Taki sam test postanowiliśmy przeprowadzić na większej ilości danych - 50 000 rekordów
+
+Dla 10 000 rekordów w interfejsie **REST** wyniki przedstawiały się następująco:
+
+![rest50k](https://raw.githubusercontent.com/szymonsadowski3/StudioProjektowe2/master/documentation/rest50k.PNG)
+
+Zaś dla interfejsu **GraphQl** wyniki były takie:
+
+![graphql50k](https://raw.githubusercontent.com/szymonsadowski3/StudioProjektowe2/master/documentation/graphql50k.PNG)
+
+Przewaga interfejsu **GraphQl** jest już bardzo widoczna. Widoczna jest tendencja, że wraz ze wzrostem ilości danych, dysproporcja między wydajnością **GraphQL** a **Rest** jest coraz większa na korzyść **GraphQL**
