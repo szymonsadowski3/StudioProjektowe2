@@ -1,0 +1,4 @@
+● złożoność kodu
+● wydajność obliczeniowa
+● możliwości modyfikacji
+● łatwość integracji z warstwą prezentacji
