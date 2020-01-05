@@ -1,0 +1,28 @@
+{
+  allThreads {
+    edges {
+      node {
+        userByCreatedById {
+          aboutMe
+          avatar
+          createdOn
+          id
+          signature
+          username
+        }
+
+        createdOn
+
+        id
+
+        sectionBySectionId {
+          id
+          name
+          sectionLogo
+        }
+
+        title
+      }
+    }
+  }
+}
