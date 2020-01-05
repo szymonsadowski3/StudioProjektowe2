@@ -69,7 +69,7 @@ Mając tak przygotowaną bazę danych mogliśmy przystąpić do implementacji si
 
 ## Implementacja dostępu REST
 
-Do implementacji dostępu REST użyliśmy biblioteki **flask** (https://palletsprojects.com/p/flask/). Biblitoka ta jest lekkim rozwiązaniem do tworzenia małych aplikacji sieciowych i szczególnie dobrze nadaje się do implementacji aplikacji REST-owych.
+Do implementacji dostępu REST użyliśmy biblioteki **flask** (https://palletsprojects.com/p/flask/). Biblioteka ta jest lekkim rozwiązaniem do tworzenia małych aplikacji sieciowych i szczególnie dobrze nadaje się do implementacji aplikacji REST-owych.
 
 Dostęp do wszystkich modeli (wylistowane poniżej) zaimplementowaliśmy w podobny sposób.
 
