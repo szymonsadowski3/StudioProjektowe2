@@ -3,15 +3,15 @@
 Szymon Sadowski
 Krzysztof Szczyrbak
 
-##Temat
+## Temat
 
 Analiza porównawcza metod tworzenia sieciowych interfejsów dostępu do zasobów
 
-##Linki
+## Linki
 
 Rozwijany przez nas kod źródłowy dostępny jest pod adresem: https://github.com/szymonsadowski3/StudioProjektowe2
 
-##Opis
+## Opis
 Celem projektu jest porównanie dwóch popularnych metod tworzenia sieciowych interfejsów
 dostępu do danych (zasobów): GraphQL i REST.
 Porównanie będzie polegało na zaimplementowaniu sieciowego modelu dostępu do zbioru
