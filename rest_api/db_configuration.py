@@ -1,3 +1,3 @@
 from peewee import PostgresqlDatabase
 
-pgdb = PostgresqlDatabase('postgres', user='postgres', password='postgres', host='localhost', port=5432)
+pgdb = PostgresqlDatabase('postgres', user='postgres', password='admin', host='localhost', port=5432)

@@ -6,7 +6,7 @@ faker = Faker()
 
 GENERATION_CFG = {
     "sections": 3,
-    "threads": 50000,
+    "threads": 50,
     "thread_followers": 10,
     "posts": 200,
     "private_msg": 200
